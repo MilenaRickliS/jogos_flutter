@@ -13,7 +13,7 @@ class ParImpar extends StatefulWidget {
 }
 
 class _ParImparState extends State<ParImpar> {
-  String _opcaoApp = 'Escolhendo um numero ...';
+  String _opcaoApp = 'Escolhendo um número ...';
   String _mensagem = '';
   
 
@@ -45,8 +45,16 @@ class _ParImparState extends State<ParImpar> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Par ou Ímpar'
+          'Par ou Ímpar',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
         ),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 141, 81, 59),
+        elevation: 4,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
