@@ -94,12 +94,14 @@ class _ParImparState extends State<ParImpar> {
               ),
           ),
           SizedBox(height: 20),
-          GridView.builder(
+          Expanded(
+            child: GridView.builder(
             shrinkWrap: true,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 5,
-              crossAxisSpacing: 30,
-              mainAxisSpacing: 30,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              
             ),
             itemCount: 11,
             itemBuilder: (context, index) {
@@ -117,12 +119,14 @@ class _ParImparState extends State<ParImpar> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 46, 46, 46),
                   ),
                 ),
               );
             },
+          ), 
           ),
+          
         ],
       ),
     );
