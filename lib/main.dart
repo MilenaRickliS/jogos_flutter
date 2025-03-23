@@ -29,7 +29,7 @@ class Jogos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Escolha um jogo',
+        title: Text('Jogos',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -39,85 +39,83 @@ class Jogos extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 72, 41, 30),
         elevation: 4,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info, color: Colors.white),
-            onPressed: (){
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Escolha um jogo abaixo'),
-                  duration: Duration(seconds: 2), // Duração do SnackBar
-                  behavior: SnackBarBehavior.floating, // Comportamento do SnackBar
-                  backgroundColor: Colors.black87, // Cor de fundo do SnackBar
-                ),
-              );
-            },
-            ),
-        ],
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16),        
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          
-          children: <Widget>[
-            ElevatedButton.icon(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                    MaterialPageRoute(
-                      builder: (context) => Jokenpo(),
-                    ),
-                );
-              }, 
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 167, 136, 0),
-                padding: EdgeInsets.symmetric( horizontal: 20, vertical: 10),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(16), 
+               
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            
+            children: <Widget>[
+              Text(
+                'Escolha um jogo abaixo',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
                 ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 40),
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                      MaterialPageRoute(
+                        builder: (context) => Jokenpo(),
+                      ),
+                  );
+                }, 
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 167, 136, 0),
+                  padding: EdgeInsets.symmetric( horizontal: 20, vertical: 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
 
-              ),
-              icon: Icon(Icons.gamepad, color: Colors.white),
-              label: Text(
-                'Joken Po',
-                 style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-              ),
-            ),
-            SizedBox(height: 20,),
-            ElevatedButton.icon(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                    MaterialPageRoute(
-                      builder: (context) => ParImpar(),
+                ),
+                icon: Icon(Icons.gamepad, color: Colors.white),
+                label: Text(
+                  'Joken Po',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
-                );
-              }, 
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 34, 119, 0),
-                padding: EdgeInsets.symmetric( horizontal: 20, vertical: 10),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+                    textAlign: TextAlign.center,
                 ),
               ),
-              icon: Icon(Icons.calculate, color: Colors.white),
-              label: Text(
-                'Par ou Ímpar',
-                 style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+              SizedBox(height: 20),
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                      MaterialPageRoute(
+                        builder: (context) => ParImpar(),
+                      ),
+                  );
+                }, 
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 34, 119, 0),
+                  padding: EdgeInsets.symmetric( horizontal: 20, vertical: 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
                   ),
+                ),
+                icon: Icon(Icons.calculate, color: Colors.white),
+                label: Text(
+                  'Par ou Ímpar',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+        ),        
       ),
     );
   }
