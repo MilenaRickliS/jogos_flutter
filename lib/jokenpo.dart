@@ -92,7 +92,8 @@ class _JogoState extends State<Jokenpo> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+                color: _mensagem.contains('Parabéns') ? Colors.green : Colors.red,
               ),
             ),
           ),

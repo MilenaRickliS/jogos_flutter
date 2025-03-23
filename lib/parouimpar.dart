@@ -77,7 +77,8 @@ class _ParImparState extends State<ParImpar> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+                color: _mensagem.contains('Parabéns') ? Colors.green : Colors.red,
               ),
             ),
           ),
@@ -85,17 +86,42 @@ class _ParImparState extends State<ParImpar> {
             padding: EdgeInsets.only(top: 32),
             child: Text(
               'Escolha um número para jogar',
-              style: TextStyle(fontSize: 18),
-            ),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54,
+                ),            
+              ),
           ),
-           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(11, (index) {
+          SizedBox(height: 20),
+          GridView.builder(
+            shrinkWrap: true,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 5,
+              crossAxisSpacing: 30,
+              mainAxisSpacing: 30,
+            ),
+            itemCount: 11,
+            itemBuilder: (context, index) {
               return ElevatedButton(
                 onPressed: () => _opcaoSelecionada(index),
-                child: Text(index.toString()),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 179, 175, 175),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                ),
+                child: Text(
+                  index.toString(),
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
               );
-            }),
+            },
           ),
         ],
       ),
