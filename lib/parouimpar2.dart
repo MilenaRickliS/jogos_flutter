@@ -85,7 +85,7 @@ class _ParImparState extends State<ParImpar2> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 32, bottom: 16),
+            padding: EdgeInsets.only(top: 32),
             child: Text(
               _opcaoApp,
               textAlign: TextAlign.center,
@@ -115,7 +115,7 @@ class _ParImparState extends State<ParImpar2> {
                   onPressed: () => _escolherParImpar(true),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                    backgroundColor: Color.fromARGB(255, 141, 81, 59),
+                    backgroundColor: Color.fromARGB(255, 139, 102, 0),
                     textStyle: TextStyle(fontSize: 20),
                   ),
                   child: Text('Par',
@@ -131,7 +131,7 @@ class _ParImparState extends State<ParImpar2> {
                   onPressed: () => _escolherParImpar(false),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                    backgroundColor: Color.fromARGB(255, 141, 81, 59),
+                    backgroundColor: Color.fromARGB(255, 24, 51, 128),
                     textStyle: TextStyle(fontSize: 20),
                   ),
                   child: Text('Ímpar',
@@ -146,13 +146,13 @@ class _ParImparState extends State<ParImpar2> {
             ),
           ] else if (!_jogoTerminado) ...[
             Padding(
-              padding: EdgeInsets.only(top: 32, bottom: 16),
+              padding: EdgeInsets.only(bottom: 16),
               child: Text(
                 'Escolha um número para jogar',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
-                  color: Colors.black54,
+                  color: const Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
             ),
@@ -161,7 +161,7 @@ class _ParImparState extends State<ParImpar2> {
               child: GridView.builder(
                 shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 5,
+                  crossAxisCount: 3,
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
                 ),
@@ -170,7 +170,7 @@ class _ParImparState extends State<ParImpar2> {
                   return ElevatedButton(
                     onPressed: () => _opcaoSelecionada(index),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 179, 175, 175),
+                      backgroundColor: const Color.fromARGB(255, 44, 94, 51),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -181,7 +181,7 @@ class _ParImparState extends State<ParImpar2> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 46, 46, 46),
+                        color: const Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
                   );
