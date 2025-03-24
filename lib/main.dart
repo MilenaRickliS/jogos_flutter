@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jogos_flutter/jokenpo.dart';
-import 'package:jogos_flutter/parouimpar.dart';
+import 'package:jogos_flutter/parouimpar2.dart';
 
 void main() {
   runApp(MyApp());
@@ -92,7 +92,7 @@ class Jogos extends StatelessWidget {
                   Navigator.push(
                     context,
                       MaterialPageRoute(
-                        builder: (context) => ParImpar(),
+                        builder: (context) => ParImpar2(),
                       ),
                   );
                 }, 
