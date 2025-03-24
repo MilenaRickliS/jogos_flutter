@@ -161,7 +161,7 @@ class _ParImparState extends State<ParImpar2> {
               child: GridView.builder(
                 shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 4,
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
                 ),
